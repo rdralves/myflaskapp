@@ -1,2 +1,10 @@
 .venv
 __pyche__
+__init__.cpython-311.pyc
+site.db
+controller.cpython-311.pyc
+model.cpython-311.pyc
+view.cpython-311.pyc
+_app/__pycache__/__init__.cpython-311.pyc
+_app/views/__pycache__/view.cpython-311.pyc
+_app/__pycache__/__init__.cpython-311.pyc

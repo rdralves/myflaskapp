@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello flask</title>
+    <title>Meu Aplicativo Flask</title>
 </head>
 <body>
-    <h3>Good _Flask</h3>
+    <h1>Meu Aplicativo Flask</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="name" placeholder="Nome do item">
+        <input type="submit" value="Adicionar">
+    </form>
+
+    <ul>
+    {% for item in data %}
+        <li>
+            {{ item.name }}
+            <a href="/delete/{{ item.id }}">Deletar</a>
+            <form action="/update" method="post">
+                <input type="hidden" name="id" value="{{ item.id }}">
+                <input type="text" name="name" value="{{ item.name }}">
+                <input type="submit" value="Atualizar">
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
 </body>
 </html>
